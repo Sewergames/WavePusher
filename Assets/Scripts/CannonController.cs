@@ -42,8 +42,11 @@ public class CannonController : MonoBehaviour {
         waveContr.amplitude = Mathf.Min(Mathf.Max(waveContr.amplitude, ampMin), ampMax);
         waveContr.freq = Mathf.Min(Mathf.Max(waveContr.freq, freqMin), freqMax);
 
-        Color col = Color.HSVToRGB(map(waveContr.freq, freqMin, freqMax, 1.0f, 0.0f), 1.0f, 1.0f);
+        Color col = Color.HSVToRGB(map(waveContr.freq, freqMin, freqMax, 0.9f, 0.1f), 1.0f, 1.0f);
+        Color bgCol = Color.HSVToRGB((map(waveContr.freq, freqMin, freqMax, 0.9f, 0.1f) + 0.2f) % 1.0f, 0.25f, 0.5f);
+
         wave.gameObject.GetComponent<LineRenderer>().material.color = col;
+        Camera.main.backgroundColor = bgCol;
 
         transform.rotation = Quaternion.Euler(0.0f, 0.0f, waveContr.rotation - 90.0f);
 
