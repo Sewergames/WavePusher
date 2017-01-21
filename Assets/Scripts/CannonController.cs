@@ -32,9 +32,6 @@ public class CannonController : MonoBehaviour {
         mousePos = Camera.main.ScreenToWorldPoint(mousePos);
 
         Vector2 vec = mousePos - transform.position;
-        
-
-       // waveContr.rotation = transform.rotation.eulerAngles.z + 90.0f;
 
         waveContr.position += Input.GetAxis("Position") * positionSpeed;
         waveContr.rotation += Input.GetAxis("Rotation") * rotSpeed;
@@ -43,6 +40,9 @@ public class CannonController : MonoBehaviour {
 
         waveContr.amplitude = Mathf.Min(Mathf.Max(waveContr.amplitude, ampMin), ampMax);
         waveContr.freq = Mathf.Min(Mathf.Max(waveContr.freq, freqMin), freqMax);
+
+        Color col = Color.HSVToRGB(map(waveContr.freq, freqMin, freqMax, 1.0f, 0.0f), 1.0f, 1.0f);
+        wave.gameObject.GetComponent<LineRenderer>().material.color = col;
 
         transform.rotation = Quaternion.Euler(0.0f, 0.0f, waveContr.rotation - 90.0f);
 
@@ -60,5 +60,10 @@ public class CannonController : MonoBehaviour {
         {
             waveContr.draw = false;
         }
+    }
+
+    float map(float s, float a1, float a2, float b1, float b2)
+    {
+        return b1 + (s - a1) * (b2 - b1) / (a2 - a1);
     }
 }

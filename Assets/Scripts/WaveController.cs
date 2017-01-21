@@ -78,7 +78,11 @@ public class WaveController : MonoBehaviour {
             pos.y += start.y;
 
             positions.Add(pos);
-            
+
+            Vector3 vec = Camera.main.WorldToViewportPoint(pos);
+            if (vec.x < 0 || vec.y < 0 || vec.x > 1 || vec.y > 1)
+                break;
+
             for (int j = 0; j < mirrors.transform.childCount; j++)
             {
                 GameObject mirror = mirrors.transform.GetChild(j).gameObject;
@@ -87,8 +91,6 @@ public class WaveController : MonoBehaviour {
                 if (col.OverlapPoint(pos) && reflectedMirror != mirror)
                 {
                     Vector3 normal = Quaternion.Euler(0.0f, 0.0f, mirror.transform.eulerAngles.z + 90.0f) * Vector3.up;
-
-                    Vector3 vec = Quaternion.Euler(0.0f, 0.0f, rot) * Vector3.right;
 
                     Vector3 reflection = Vector3.Reflect(vec, normal);
 
