@@ -77,11 +77,9 @@ public class WaveController : MonoBehaviour {
             pos.x += start.x;
             pos.y += start.y;
 
-            positions.Add(pos);
-
             Vector3 vec = Camera.main.WorldToViewportPoint(pos);
-            if (vec.x < 0 || vec.y < 0 || vec.x > 1 || vec.y > 1)
-                break;
+            if (vec.x >= -0.1f && vec.y >= -0.1f && vec.x <= 1.1f && vec.y <= 1.1f)
+                positions.Add(pos);
 
             for (int j = 0; j < mirrors.transform.childCount; j++)
             {
