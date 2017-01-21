@@ -3,9 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-[RequireComponent (typeof (LineRenderer))]
+[RequireComponent (typeof (LineRenderer), typeof(EdgeCollider2D))]
 public class WaveController : MonoBehaviour {
 	private LineRenderer lineRen;
+    private EdgeCollider2D coll;
     public float freq = 1.0f;
     public int waveCount = 10;
     public int linesPerWave = 10;
@@ -19,23 +20,22 @@ public class WaveController : MonoBehaviour {
     
     private List<Vector3> positions;
     private int bounceCount = 0;
-
-	// Use this for initialization
+    
 	void Start () {
-		lineRen = GetComponent<LineRenderer> ();
-        RegenWave();
-
+        lineRen = GetComponent<LineRenderer>();
+        coll = GetComponent<EdgeCollider2D>();
     }
 	
-	// Update is called once per frame
 	void Update () {
         if (draw)
         {
+            coll.enabled = true;
             RegenWave();
         }
         else
         {
             lineRen.numPositions = 0;
+            coll.enabled = false;
         }
     }
 
@@ -45,12 +45,20 @@ public class WaveController : MonoBehaviour {
         positions = new List<Vector3>();
 
         float lineLength = 1 / freq / linesPerWave;
+
         GenSemiWave(cannon.transform.position, rotation, lineLength, null, position);
         
         Vector3[] positionsArr = positions.ToArray();
 
         lineRen.numPositions = positionsArr.Length;
         lineRen.SetPositions(positionsArr);
+
+        List<Vector2> positions2D = new List<Vector2>(); 
+
+        for (int i = 0; i < positions.Count; i++)
+            positions2D.Add(positions[i]);
+
+        coll.points = positions2D.ToArray();
     }
 
     float GenSemiWave(Vector3 start, float rot, float lineLength, GameObject reflectedMirror, float sinPos)

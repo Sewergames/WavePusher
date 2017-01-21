@@ -4,7 +4,10 @@ using UnityEngine;
 
 public class CannonController : MonoBehaviour {
     public GameObject wave;
-    public float speed;
+    public float positionSpeed;
+    public float rotSpeed;
+    public float amplitudeSpeed;
+    public float freqSpeed;
 
     private WaveController waveContr;
 
@@ -20,13 +23,17 @@ public class CannonController : MonoBehaviour {
 
         Vector2 vec = mousePos - transform.position;
         
-        transform.rotation = Quaternion.LookRotation(Vector3.forward, vec);
 
-        waveContr.rotation = transform.rotation.eulerAngles.z + 90.0f;
+       // waveContr.rotation = transform.rotation.eulerAngles.z + 90.0f;
 
-        waveContr.position += Input.GetAxis("Horizontal") * -speed;
+        waveContr.position += Input.GetAxis("Position") * positionSpeed;
+        waveContr.rotation += Input.GetAxis("Rotation") * rotSpeed;
+        waveContr.amplitude += Input.GetAxis("Amplitude") * amplitudeSpeed;
+        waveContr.freq += Input.GetAxis("Frequency") * freqSpeed;
 
-        if (!Input.GetMouseButton(0))
+        transform.rotation = Quaternion.Euler(0.0f, 0.0f, waveContr.rotation - 90.0f);
+
+        if (Input.GetAxisRaw("Show") >= 0.0f)
         {
             waveContr.draw = true;
         }
