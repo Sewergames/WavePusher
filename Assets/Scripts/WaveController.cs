@@ -15,6 +15,7 @@ public class WaveController : MonoBehaviour {
     public GameObject cannon;
     public GameObject mirrors;
     public int maxBounces = 2;
+    public bool draw = true;
     
     private List<Vector3> positions;
     private int bounceCount = 0;
@@ -28,7 +29,14 @@ public class WaveController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        RegenWave();
+        if (draw)
+        {
+            RegenWave();
+        }
+        else
+        {
+            lineRen.numPositions = 0;
+        }
     }
 
     void RegenWave()
