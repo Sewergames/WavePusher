@@ -79,36 +79,35 @@ public class WaveController : MonoBehaviour {
             pos.x += start.x;
             pos.y += start.y;
 
-            positions.Add(pos);
-
             Vector3 vec1 = Camera.main.WorldToViewportPoint(pos);
-            if (vec1.x < 0 || vec1.y < 0 || vec1.x > 1 || vec1.y > 1)
-                break;
+            if (vec1.x >= -0.1f && vec1.y >= -0.1f && vec1.x <= 1.1f && vec1.y <= 1.1f)
+                positions.Add(pos);
 
             for (int j = 0; j < mirrors.transform.childCount; j++)
             {
                 GameObject mirror = mirrors.transform.GetChild(j).gameObject;
                 BoxCollider2D col = mirror.GetComponent<BoxCollider2D>();
-
+                
                 if (col.OverlapPoint(pos) && reflectedMirror != mirror)
                 {
-                    Vector3 normal = Quaternion.Euler(0.0f, 0.0f, mirror.transform.eulerAngles.z + 90.0f) * Vector3.down;
-                    
-                    Vector3 reflection = Vector3.Reflect((pos - start).normalized, normal.normalized);
+                    Vector3 straightPos;
+                    Vector3 direction = Quaternion.Euler(0.0f, 0.0f, rot) * Vector3.right;
+                    RaycastHit2D hit = Physics2D.Raycast(start + direction * 0.1f, direction);
 
-                    float angle = Quaternion.FromToRotation(Vector3.right, reflection.normalized).eulerAngles.z;
+                    if (hit.collider != null)
+                    {
+                        straightPos = hit.point;
+                        Vector3 normal = Quaternion.Euler(0.0f, 0.0f, mirror.transform.eulerAngles.z + 90.0f) * Vector3.down;
 
-                    Debug.DrawLine(start, pos);
-                    Debug.DrawLine(pos, pos + normal.normalized);
-                    Debug.DrawLine(pos, pos + reflection);
-                    Debug.Log(angle);
+                        Vector3 reflection = Vector3.Reflect((straightPos - start).normalized, normal.normalized);
 
-                    float rot2 = (float)(Math.Atan2(1.0f, 0.0f) - Math.Atan2(reflection.x, reflection.y)) * Mathf.Rad2Deg;
-                    rot2 = angle;
-                    if (bounceCount <= maxBounces)
-                        GenSemiWave(pos, rot2, lineLength, mirror, position);
+                        float angle = Quaternion.FromToRotation(Vector3.right, reflection.normalized).eulerAngles.z;
 
-                    i = lineCount;
+                        if (bounceCount <= maxBounces)
+                            GenSemiWave(straightPos, angle, lineLength, mirror, position);
+
+                        i = lineCount;
+                    }
 
                     break;
                 }

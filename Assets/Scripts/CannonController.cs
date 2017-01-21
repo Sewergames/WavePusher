@@ -29,8 +29,6 @@ public class CannonController : MonoBehaviour {
         mousePos.z -= Camera.main.transform.position.z;
         mousePos = Camera.main.ScreenToWorldPoint(mousePos);
 
-        Vector2 vec = mousePos - transform.position;
-
         float posDelta = Input.GetAxis("Position") * positionSpeed;
         float rotDelta = Input.GetAxis("Rotation") * rotSpeed;
         float ampDelta = Input.GetAxis("Amplitude") * amplitudeSpeed;
