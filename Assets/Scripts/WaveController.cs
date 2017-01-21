@@ -73,7 +73,7 @@ public class WaveController : MonoBehaviour {
             Vector3 pos = new Vector3(
                 i * lineLength,
                 (float) Math.Sin((float) i / (float) linesPerWave * Math.PI * 2.0f + sinPos) * amplitude,
-                0.0f);
+                -1.0f);
 
             pos = Quaternion.Euler(0, 0, rot) * pos;
             pos.x += start.x;
@@ -98,10 +98,7 @@ public class WaveController : MonoBehaviour {
 
                     float angle = Quaternion.FromToRotation(Vector3.right, reflection.normalized).eulerAngles.z;
 
-                    Debug.DrawLine(start, pos);
-                    Debug.DrawLine(pos, pos + normal.normalized);
-                    Debug.DrawLine(pos, pos + reflection);
-                    Debug.Log(angle);
+                   
 
                     float rot2 = (float)(Math.Atan2(1.0f, 0.0f) - Math.Atan2(reflection.x, reflection.y)) * Mathf.Rad2Deg;
                     rot2 = angle;
