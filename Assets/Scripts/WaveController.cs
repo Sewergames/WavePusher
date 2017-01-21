@@ -101,11 +101,7 @@ public class WaveController : MonoBehaviour {
 
                         Vector3 reflection = Vector3.Reflect((straightPos - start).normalized, normal.normalized);
 
-<<<<<<< HEAD
-                   
-=======
                         float angle = Quaternion.FromToRotation(Vector3.right, reflection.normalized).eulerAngles.z;
->>>>>>> origin/master
 
                         if (bounceCount <= maxBounces)
                             GenSemiWave(straightPos, angle, lineLength, mirror, position);
