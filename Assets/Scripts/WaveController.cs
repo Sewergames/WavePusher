@@ -27,11 +27,12 @@ public class WaveController : MonoBehaviour {
         coll = GetComponent<EdgeCollider2D>();
     }
 	
-	void Update () {
+	void Update ()
+    {
         if (draw)
         {
-            coll.enabled = true;
             RegenWave();
+            coll.enabled = true;
         }
         else
         {
@@ -91,15 +92,19 @@ public class WaveController : MonoBehaviour {
 
                 if (col.OverlapPoint(pos) && reflectedMirror != mirror)
                 {
-                    Vector3 normal = Quaternion.Euler(0.0f, 0.0f, mirror.transform.eulerAngles.z + 90.0f) * Vector3.up;
+                    Vector3 normal = Quaternion.Euler(0.0f, 0.0f, mirror.transform.eulerAngles.z + 90.0f) * Vector3.down;
                     
-                    Vector3 reflection = Vector3.Reflect(pos, normal);
+                    Vector3 reflection = Vector3.Reflect((pos - start).normalized, normal.normalized);
+
+                    float angle = Quaternion.FromToRotation(Vector3.right, reflection.normalized).eulerAngles.z;
 
                     Debug.DrawLine(start, pos);
-                    Debug.DrawLine(pos, reflection);
+                    Debug.DrawLine(pos, pos + normal.normalized);
+                    Debug.DrawLine(pos, pos + reflection);
+                    Debug.Log(angle);
 
                     float rot2 = (float)(Math.Atan2(1.0f, 0.0f) - Math.Atan2(reflection.x, reflection.y)) * Mathf.Rad2Deg;
-                   
+                    rot2 = angle;
                     if (bounceCount <= maxBounces)
                         GenSemiWave(pos, rot2, lineLength, mirror, position);
 
