@@ -7,7 +7,6 @@ public class CannonController : MonoBehaviour {
     public GameObject head;
     public GameObject headLeft;
     public GameObject headRight;
-    public float temp;
 
     public float positionSpeed;
     public float rotSpeed;
@@ -23,7 +22,6 @@ public class CannonController : MonoBehaviour {
 
 	void Start () {
         waveContr = wave.GetComponent<WaveController>();
-
     }
 	
 	void Update () {
@@ -33,10 +31,15 @@ public class CannonController : MonoBehaviour {
 
         Vector2 vec = mousePos - transform.position;
 
-        waveContr.position += Input.GetAxis("Position") * positionSpeed;
-        waveContr.rotation += Input.GetAxis("Rotation") * rotSpeed;
-        waveContr.amplitude += Input.GetAxis("Amplitude") * amplitudeSpeed;
-        waveContr.freq += Input.GetAxis("Frequency") * freqSpeed;
+        float posDelta = Input.GetAxis("Position") * positionSpeed;
+        float rotDelta = Input.GetAxis("Rotation") * rotSpeed;
+        float ampDelta = Input.GetAxis("Amplitude") * amplitudeSpeed;
+        float freqDelta = Input.GetAxis("Frequency") * freqSpeed;
+
+        waveContr.position += posDelta;
+        waveContr.rotation += rotDelta;
+        waveContr.amplitude += ampDelta;
+        waveContr.freq += freqDelta;
 
         waveContr.amplitude = Mathf.Min(Mathf.Max(waveContr.amplitude, ampMin), ampMax);
         waveContr.freq = Mathf.Min(Mathf.Max(waveContr.freq, freqMin), freqMax);
@@ -46,7 +49,7 @@ public class CannonController : MonoBehaviour {
 
         transform.rotation = Quaternion.Euler(0.0f, 0.0f, waveContr.rotation - 90.0f);
 
-        temp = waveContr.amplitude * 2.2f;
+        float temp = waveContr.amplitude * 2.2f;
 
         head.transform.localScale = new Vector3(temp, 1.0f, 1.0f);
         headLeft.transform.localPosition = new Vector3(-temp / 2.0f, 0.0f, 0.0f);

@@ -7,6 +7,7 @@ using UnityEngine;
 public class WaveController : MonoBehaviour {
 	private LineRenderer lineRen;
     private EdgeCollider2D coll;
+
     public float freq = 1.0f;
     public int waveCount = 10;
     public int linesPerWave = 10;
@@ -39,7 +40,7 @@ public class WaveController : MonoBehaviour {
         }
     }
 
-    void RegenWave()
+    public void RegenWave()
     {
         bounceCount = 0;
         positions = new List<Vector3>();
@@ -77,9 +78,11 @@ public class WaveController : MonoBehaviour {
             pos.x += start.x;
             pos.y += start.y;
 
-            Vector3 vec = Camera.main.WorldToViewportPoint(pos);
-            if (vec.x >= -0.1f && vec.y >= -0.1f && vec.x <= 1.1f && vec.y <= 1.1f)
-                positions.Add(pos);
+            positions.Add(pos);
+
+            Vector3 vec1 = Camera.main.WorldToViewportPoint(pos);
+            if (vec1.x < 0 || vec1.y < 0 || vec1.x > 1 || vec1.y > 1)
+                break;
 
             for (int j = 0; j < mirrors.transform.childCount; j++)
             {
@@ -89,11 +92,14 @@ public class WaveController : MonoBehaviour {
                 if (col.OverlapPoint(pos) && reflectedMirror != mirror)
                 {
                     Vector3 normal = Quaternion.Euler(0.0f, 0.0f, mirror.transform.eulerAngles.z + 90.0f) * Vector3.up;
+                    
+                    Vector3 reflection = Vector3.Reflect(pos, normal);
 
-                    Vector3 reflection = Vector3.Reflect(vec, normal);
+                    Debug.DrawLine(start, pos);
+                    Debug.DrawLine(pos, reflection);
 
                     float rot2 = (float)(Math.Atan2(1.0f, 0.0f) - Math.Atan2(reflection.x, reflection.y)) * Mathf.Rad2Deg;
-
+                   
                     if (bounceCount <= maxBounces)
                         GenSemiWave(pos, rot2, lineLength, mirror, position);
 
