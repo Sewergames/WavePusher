@@ -16,6 +16,7 @@ public class WaveController : MonoBehaviour {
     public float position = 0.0f;
     public GameObject cannon;
     public GameObject mirrors;
+    public GameObject walls;
     public int maxBounces = 2;
     public bool draw = true;
     
@@ -109,6 +110,18 @@ public class WaveController : MonoBehaviour {
                         i = lineCount;
                     }
 
+                    break;
+                }
+            }
+
+            for (int j = 0; j < walls.transform.childCount; j++)
+            {
+                GameObject wall = walls.transform.GetChild(j).gameObject;
+                BoxCollider2D col = wall.GetComponent<BoxCollider2D>();
+
+                if (col.OverlapPoint(pos))
+                {
+                    i = lineCount;
                     break;
                 }
             }
