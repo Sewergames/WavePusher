@@ -92,7 +92,7 @@ public class WaveController : MonoBehaviour {
                 {
                     Vector3 straightPos;
                     Vector3 direction = Quaternion.Euler(0.0f, 0.0f, rot) * Vector3.right;
-                    RaycastHit2D hit = Physics2D.Raycast(start + direction * 0.1f, direction);
+                    RaycastHit2D hit = Physics2D.Raycast(start + direction * 0.25f, direction);
 
                     if (hit.collider != null)
                     {
