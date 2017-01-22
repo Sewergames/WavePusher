@@ -33,7 +33,6 @@ public class Buttons : MonoBehaviour {
     public void Restart()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        Time.timeScale = 1;
     }
        
     public void Pause()

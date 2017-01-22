@@ -1,0 +1,43 @@
+Initialize engine version: 5.5.0f3 (38b4efef76f0)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: Radeon (TM) RX 470 Graphics (ID=0x67df)
+    Vendor:   ATI
+    VRAM:     8140 MB
+    Driver:   21.19.137.1
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\Users\User\Documents\GitHub\WavePusher\WavePusher_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\User\Documents\GitHub\WavePusher\WavePusher_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\User\Documents\GitHub\WavePusher\WavePusher_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\User\Documents\GitHub\WavePusher\WavePusher_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\User\Documents\GitHub\WavePusher\WavePusher_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\User\Documents\GitHub\WavePusher\WavePusher_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\User\Documents\GitHub\WavePusher\WavePusher_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading C:\Users\User\Documents\GitHub\WavePusher\WavePusher_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: C:\Users\User\Documents\GitHub\WavePusher\WavePusher_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll (this message is harmless)
+Loading C:\Users\User\Documents\GitHub\WavePusher\WavePusher_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll into Unity Child Domain
+- Completed reload, in  0.025 seconds
+Platform assembly: C:\Users\User\Documents\GitHub\WavePusher\WavePusher_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: C:\Users\User\Documents\GitHub\WavePusher\WavePusher_Data\Managed\System.dll (this message is harmless)
+desktop: 1920x1080 59Hz; virtual: 1920x1080 at 0,0
+<RI> Initializing input.
+<RI> Input initialized.
+<RI> Initialized touch support.
+UnloadTime: 0.880141 ms
+The referenced script on this Behaviour (Game Object 'GameObject') is missing!
+ 
+(Filename:  Line: 1754)
+
+The referenced script on this Behaviour (Game Object 'Main Camera') is missing!
+ 
+(Filename:  Line: 1754)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.140837 ms
+
+Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 387.
+Total: 0.111386 ms (FindLiveObjects: 0.028318 ms CreateObjectMapping: 0.015103 ms MarkObjects: 0.065699 ms  DeleteObjects: 0.002265 ms)
+
+Setting up 1 worker threads for Enlighten.
+  Thread -> id: 2568 -> priority: 1 
