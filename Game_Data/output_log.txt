@@ -17,9 +17,7 @@ Platform assembly: C:\Users\User\Documents\GitHub\WavePusher\Game_Data\Managed\U
 Loading C:\Users\User\Documents\GitHub\WavePusher\Game_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
 Platform assembly: C:\Users\User\Documents\GitHub\WavePusher\Game_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll (this message is harmless)
 Loading C:\Users\User\Documents\GitHub\WavePusher\Game_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll into Unity Child Domain
-Platform assembly: C:\Users\User\Documents\GitHub\WavePusher\Game_Data\Managed\UnityEngine.Analytics.dll (this message is harmless)
-Loading C:\Users\User\Documents\GitHub\WavePusher\Game_Data\Managed\UnityEngine.Analytics.dll into Unity Child Domain
-- Completed reload, in  0.114 seconds
+- Completed reload, in  0.020 seconds
 Platform assembly: C:\Users\User\Documents\GitHub\WavePusher\Game_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: C:\Users\User\Documents\GitHub\WavePusher\Game_Data\Managed\System.dll (this message is harmless)
 desktop: 1920x1080 59Hz; virtual: 1920x1080 at 0,0
@@ -34,233 +32,24 @@ The referenced script on this Behaviour (Game Object 'Main Camera') is missing!
  
 (Filename:  Line: 1754)
 
-UnloadTime: 1.026264 ms
+UnloadTime: 0.995303 ms
 Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 0.282430 ms
+UnloadTime: 0.274123 ms
 
-Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 343.
-Total: 0.146878 ms (FindLiveObjects: 0.043799 ms CreateObjectMapping: 0.017746 ms MarkObjects: 0.070230 ms  DeleteObjects: 0.014348 ms)
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 486.
+Total: 0.281297 ms (FindLiveObjects: 0.062678 ms CreateObjectMapping: 0.047952 ms MarkObjects: 0.152165 ms  DeleteObjects: 0.017368 ms)
 
-Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 5.163796 ms
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 7.550862 ms
 
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 379.
-Total: 0.107610 ms (FindLiveObjects: 0.032849 ms CreateObjectMapping: 0.007551 ms MarkObjects: 0.058525 ms  DeleteObjects: 0.007929 ms)
-
-Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 2.459562 ms
-
-Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 452.
-Total: 0.132908 ms (FindLiveObjects: 0.030584 ms CreateObjectMapping: 0.021899 ms MarkObjects: 0.059657 ms  DeleteObjects: 0.007551 ms)
+Unloading 2 unused Assets to reduce memory usage. Loaded Objects now: 488.
+Total: 0.228814 ms (FindLiveObjects: 0.047197 ms CreateObjectMapping: 0.020766 ms MarkObjects: 0.155185 ms  DeleteObjects: 0.005286 ms)
 
 Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 5.932173 ms
+UnloadTime: 6.109259 ms
 
-Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 312.
-Total: 0.141215 ms (FindLiveObjects: 0.040023 ms CreateObjectMapping: 0.020389 ms MarkObjects: 0.072117 ms  DeleteObjects: 0.008306 ms)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at WaveController.GenSemiWave (Vector3 start, Single rot, Single lineLength, UnityEngine.GameObject reflectedMirror, Single sinPos) [0x00000] in <filename unknown>:0 
-  at WaveController.RegenWave () [0x00000] in <filename unknown>:0 
-  at WaveController.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at WaveController.GenSemiWave (Vector3 start, Single rot, Single lineLength, UnityEngine.GameObject reflectedMirror, Single sinPos) [0x00000] in <filename unknown>:0 
-  at WaveController.RegenWave () [0x00000] in <filename unknown>:0 
-  at WaveController.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at WaveController.GenSemiWave (Vector3 start, Single rot, Single lineLength, UnityEngine.GameObject reflectedMirror, Single sinPos) [0x00000] in <filename unknown>:0 
-  at WaveController.RegenWave () [0x00000] in <filename unknown>:0 
-  at WaveController.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at WaveController.GenSemiWave (Vector3 start, Single rot, Single lineLength, UnityEngine.GameObject reflectedMirror, Single sinPos) [0x00000] in <filename unknown>:0 
-  at WaveController.RegenWave () [0x00000] in <filename unknown>:0 
-  at WaveController.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at WaveController.GenSemiWave (Vector3 start, Single rot, Single lineLength, UnityEngine.GameObject reflectedMirror, Single sinPos) [0x00000] in <filename unknown>:0 
-  at WaveController.RegenWave () [0x00000] in <filename unknown>:0 
-  at WaveController.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at WaveController.GenSemiWave (Vector3 start, Single rot, Single lineLength, UnityEngine.GameObject reflectedMirror, Single sinPos) [0x00000] in <filename unknown>:0 
-  at WaveController.RegenWave () [0x00000] in <filename unknown>:0 
-  at WaveController.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at WaveController.GenSemiWave (Vector3 start, Single rot, Single lineLength, UnityEngine.GameObject reflectedMirror, Single sinPos) [0x00000] in <filename unknown>:0 
-  at WaveController.RegenWave () [0x00000] in <filename unknown>:0 
-  at WaveController.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at WaveController.GenSemiWave (Vector3 start, Single rot, Single lineLength, UnityEngine.GameObject reflectedMirror, Single sinPos) [0x00000] in <filename unknown>:0 
-  at WaveController.RegenWave () [0x00000] in <filename unknown>:0 
-  at WaveController.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at WaveController.GenSemiWave (Vector3 start, Single rot, Single lineLength, UnityEngine.GameObject reflectedMirror, Single sinPos) [0x00000] in <filename unknown>:0 
-  at WaveController.RegenWave () [0x00000] in <filename unknown>:0 
-  at WaveController.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at WaveController.GenSemiWave (Vector3 start, Single rot, Single lineLength, UnityEngine.GameObject reflectedMirror, Single sinPos) [0x00000] in <filename unknown>:0 
-  at WaveController.RegenWave () [0x00000] in <filename unknown>:0 
-  at WaveController.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at WaveController.GenSemiWave (Vector3 start, Single rot, Single lineLength, UnityEngine.GameObject reflectedMirror, Single sinPos) [0x00000] in <filename unknown>:0 
-  at WaveController.RegenWave () [0x00000] in <filename unknown>:0 
-  at WaveController.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at WaveController.GenSemiWave (Vector3 start, Single rot, Single lineLength, UnityEngine.GameObject reflectedMirror, Single sinPos) [0x00000] in <filename unknown>:0 
-  at WaveController.RegenWave () [0x00000] in <filename unknown>:0 
-  at WaveController.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at WaveController.GenSemiWave (Vector3 start, Single rot, Single lineLength, UnityEngine.GameObject reflectedMirror, Single sinPos) [0x00000] in <filename unknown>:0 
-  at WaveController.RegenWave () [0x00000] in <filename unknown>:0 
-  at WaveController.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at WaveController.GenSemiWave (Vector3 start, Single rot, Single lineLength, UnityEngine.GameObject reflectedMirror, Single sinPos) [0x00000] in <filename unknown>:0 
-  at WaveController.RegenWave () [0x00000] in <filename unknown>:0 
-  at WaveController.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at WaveController.GenSemiWave (Vector3 start, Single rot, Single lineLength, UnityEngine.GameObject reflectedMirror, Single sinPos) [0x00000] in <filename unknown>:0 
-  at WaveController.RegenWave () [0x00000] in <filename unknown>:0 
-  at WaveController.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at WaveController.GenSemiWave (Vector3 start, Single rot, Single lineLength, UnityEngine.GameObject reflectedMirror, Single sinPos) [0x00000] in <filename unknown>:0 
-  at WaveController.RegenWave () [0x00000] in <filename unknown>:0 
-  at WaveController.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at WaveController.GenSemiWave (Vector3 start, Single rot, Single lineLength, UnityEngine.GameObject reflectedMirror, Single sinPos) [0x00000] in <filename unknown>:0 
-  at WaveController.RegenWave () [0x00000] in <filename unknown>:0 
-  at WaveController.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at WaveController.GenSemiWave (Vector3 start, Single rot, Single lineLength, UnityEngine.GameObject reflectedMirror, Single sinPos) [0x00000] in <filename unknown>:0 
-  at WaveController.RegenWave () [0x00000] in <filename unknown>:0 
-  at WaveController.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at WaveController.GenSemiWave (Vector3 start, Single rot, Single lineLength, UnityEngine.GameObject reflectedMirror, Single sinPos) [0x00000] in <filename unknown>:0 
-  at WaveController.RegenWave () [0x00000] in <filename unknown>:0 
-  at WaveController.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at WaveController.GenSemiWave (Vector3 start, Single rot, Single lineLength, UnityEngine.GameObject reflectedMirror, Single sinPos) [0x00000] in <filename unknown>:0 
-  at WaveController.RegenWave () [0x00000] in <filename unknown>:0 
-  at WaveController.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at WaveController.GenSemiWave (Vector3 start, Single rot, Single lineLength, UnityEngine.GameObject reflectedMirror, Single sinPos) [0x00000] in <filename unknown>:0 
-  at WaveController.RegenWave () [0x00000] in <filename unknown>:0 
-  at WaveController.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at WaveController.GenSemiWave (Vector3 start, Single rot, Single lineLength, UnityEngine.GameObject reflectedMirror, Single sinPos) [0x00000] in <filename unknown>:0 
-  at WaveController.RegenWave () [0x00000] in <filename unknown>:0 
-  at WaveController.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at WaveController.GenSemiWave (Vector3 start, Single rot, Single lineLength, UnityEngine.GameObject reflectedMirror, Single sinPos) [0x00000] in <filename unknown>:0 
-  at WaveController.RegenWave () [0x00000] in <filename unknown>:0 
-  at WaveController.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at WaveController.GenSemiWave (Vector3 start, Single rot, Single lineLength, UnityEngine.GameObject reflectedMirror, Single sinPos) [0x00000] in <filename unknown>:0 
-  at WaveController.RegenWave () [0x00000] in <filename unknown>:0 
-  at WaveController.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at WaveController.GenSemiWave (Vector3 start, Single rot, Single lineLength, UnityEngine.GameObject reflectedMirror, Single sinPos) [0x00000] in <filename unknown>:0 
-  at WaveController.RegenWave () [0x00000] in <filename unknown>:0 
-  at WaveController.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at WaveController.GenSemiWave (Vector3 start, Single rot, Single lineLength, UnityEngine.GameObject reflectedMirror, Single sinPos) [0x00000] in <filename unknown>:0 
-  at WaveController.RegenWave () [0x00000] in <filename unknown>:0 
-  at WaveController.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at WaveController.GenSemiWave (Vector3 start, Single rot, Single lineLength, UnityEngine.GameObject reflectedMirror, Single sinPos) [0x00000] in <filename unknown>:0 
-  at WaveController.RegenWave () [0x00000] in <filename unknown>:0 
-  at WaveController.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-The referenced script on this Behaviour (Game Object 'GameObject') is missing!
- 
-(Filename:  Line: 1754)
-
-The referenced script on this Behaviour (Game Object 'Main Camera') is missing!
- 
-(Filename:  Line: 1754)
-
-Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 0.238631 ms
-
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 384.
-Total: 0.091752 ms (FindLiveObjects: 0.024542 ms CreateObjectMapping: 0.007174 ms MarkObjects: 0.050973 ms  DeleteObjects: 0.007929 ms)
+Unloading 2 unused Assets to reduce memory usage. Loaded Objects now: 523.
+Total: 0.197097 ms (FindLiveObjects: 0.022654 ms CreateObjectMapping: 0.007551 ms MarkObjects: 0.161604 ms  DeleteObjects: 0.004908 ms)
 
 Setting up 1 worker threads for Enlighten.
-  Thread -> id: 1138 -> priority: 1 
+  Thread -> id: 1b74 -> priority: 1 

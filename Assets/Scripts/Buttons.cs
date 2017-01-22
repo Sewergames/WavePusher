@@ -5,34 +5,46 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class Buttons : MonoBehaviour {
-    public float click = 0;
+    public GameObject pauseMenu;
+
     
 
 	void Start ()
-    {
+    { 
 
 	}
 	
 	void Update ()
     { 
-        Restart();
+        
 	}
 
-    public void MainMenu(string MainMenu)
-    {
-        
-        
-            Application.LoadLevel("Main Menu");
-        
+    public void MainMenu()
+    {       
+            SceneManager.LoadScene("MainMenu");
+        Time.timeScale = 1;
     }
 
-    void exit()
+    public void exit()
     {
-
+        Application.Quit();
     }
 
     public void Restart()
     {
-            Application.LoadLevel(Application.loadedLevel);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        Time.timeScale = 1;
+    }
+       
+    public void Pause()
+    {
+        pauseMenu.SetActive(true);
+        Time.timeScale = 0;
+    }
+
+    public void Resume()
+    {
+        pauseMenu.SetActive(false);
+        Time.timeScale = 1;
     }
 }
