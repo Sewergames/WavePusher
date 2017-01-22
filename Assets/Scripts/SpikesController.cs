@@ -21,7 +21,7 @@ public class SpikesController : MonoBehaviour {
 
     void OnCollisionEnter2D(Collision2D col)
     {
-        if (col.gameObject.name == "Apple")
+        if (col.gameObject.tag == "Apple")
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }
