@@ -17,14 +17,14 @@ Platform assembly: C:\Users\User\Documents\GitHub\WavePusher\WavePusher_Data\Man
 Loading C:\Users\User\Documents\GitHub\WavePusher\WavePusher_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
 Platform assembly: C:\Users\User\Documents\GitHub\WavePusher\WavePusher_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll (this message is harmless)
 Loading C:\Users\User\Documents\GitHub\WavePusher\WavePusher_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll into Unity Child Domain
-- Completed reload, in  0.025 seconds
+- Completed reload, in  0.107 seconds
 Platform assembly: C:\Users\User\Documents\GitHub\WavePusher\WavePusher_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: C:\Users\User\Documents\GitHub\WavePusher\WavePusher_Data\Managed\System.dll (this message is harmless)
 desktop: 1920x1080 59Hz; virtual: 1920x1080 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
 <RI> Initialized touch support.
-UnloadTime: 0.880141 ms
+UnloadTime: 7.993019 ms
 The referenced script on this Behaviour (Game Object 'GameObject') is missing!
  
 (Filename:  Line: 1754)
@@ -34,10 +34,22 @@ The referenced script on this Behaviour (Game Object 'Main Camera') is missing!
 (Filename:  Line: 1754)
 
 Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 0.140837 ms
+UnloadTime: 0.141593 ms
 
 Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 387.
-Total: 0.111386 ms (FindLiveObjects: 0.028318 ms CreateObjectMapping: 0.015103 ms MarkObjects: 0.065699 ms  DeleteObjects: 0.002265 ms)
+Total: 0.994171 ms (FindLiveObjects: 0.012460 ms CreateObjectMapping: 0.013215 ms MarkObjects: 0.964720 ms  DeleteObjects: 0.003398 ms)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.509357 ms
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 490.
+Total: 0.228436 ms (FindLiveObjects: 0.039268 ms CreateObjectMapping: 0.008684 ms MarkObjects: 0.157828 ms  DeleteObjects: 0.022277 ms)
+
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 4.731471 ms
+
+Unloading 2 unused Assets to reduce memory usage. Loaded Objects now: 527.
+Total: 0.270725 ms (FindLiveObjects: 0.042666 ms CreateObjectMapping: 0.009439 ms MarkObjects: 0.212955 ms  DeleteObjects: 0.004530 ms)
 
 Setting up 1 worker threads for Enlighten.
-  Thread -> id: 2568 -> priority: 1 
+  Thread -> id: 594 -> priority: 1 
