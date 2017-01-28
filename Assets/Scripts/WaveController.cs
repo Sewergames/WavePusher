@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 
 [RequireComponent (typeof (LineRenderer), typeof(EdgeCollider2D))]
@@ -24,12 +23,9 @@ public class WaveController : MonoBehaviour {
     private List<Vector3> positions;
     private int bounceCount = 0;
     
-
-    void Start()
-    {
+	void Start () {
         lineRen = GetComponent<LineRenderer>();
         coll = GetComponent<EdgeCollider2D>();
-
     }
 	
 	void Update ()
@@ -44,8 +40,6 @@ public class WaveController : MonoBehaviour {
             lineRen.numPositions = 0;
             coll.enabled = false;
         }
-
-       
     }
 
     public void RegenWave()
@@ -136,5 +130,4 @@ public class WaveController : MonoBehaviour {
 
         return 0.0f;
     }
-
 }

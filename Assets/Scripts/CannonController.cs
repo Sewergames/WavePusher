@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class CannonController : MonoBehaviour {
     public GameObject wave;
@@ -33,12 +32,12 @@ public class CannonController : MonoBehaviour {
         float posDelta = Input.GetAxis("Position") * positionSpeed;
         float rotDelta = Input.GetAxis("Rotation") * rotSpeed;
         float ampDelta = Input.GetAxis("Amplitude") * amplitudeSpeed;
-        float freqDelta = Input.GetAxis("frequency") * freqSpeed;
+        float freqDelta = Input.GetAxis("Frequency") * freqSpeed;
 
-        waveContr.position += posDelta * Time.deltaTime;
-        waveContr.rotation += rotDelta * Time.deltaTime;
-        waveContr.amplitude += ampDelta * Time.deltaTime;
-        waveContr.freq += freqDelta * Time.deltaTime;
+        waveContr.position += posDelta;
+        waveContr.rotation += rotDelta;
+        waveContr.amplitude += ampDelta;
+        waveContr.freq += freqDelta;
 
         waveContr.amplitude = Mathf.Min(Mathf.Max(waveContr.amplitude, ampMin), ampMax);
         waveContr.freq = Mathf.Min(Mathf.Max(waveContr.freq, freqMin), freqMax);
@@ -71,5 +70,4 @@ public class CannonController : MonoBehaviour {
     {
         return b1 + (s - a1) * (b2 - b1) / (a2 - a1);
     }
-
 }
